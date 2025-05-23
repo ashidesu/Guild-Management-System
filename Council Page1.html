@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "styles.css" rel = "stylesheet">
+    <title>Scatter Company</title>
+</head>
+<body>
+    <div class = "header">
+        <img src = "images/logo.png" class = "imghd">
+        <p class = "hd">Welcome to Scatter Company!</p>
+        <ul class = "navbarUl">
+            <a href = "index.html"><li class = "navbarLi">Logout</li></a>
+        </ul>
+    </div>
+    <div class = "main">
+        <div class = "options">
+            <ul class = "op">
+                <a href = "Council%20Page.html" class = "opLi"><li>New Member Accounts</li></a>
+                <a href = "Council%20Page1.html"class = "opLi"><li>Death Logs</li></a>
+            </ul>
+        </div>
+        <div class = "holder">
+            <table class = "rg">
+                <thead>
+                    <tr>
+                        <td>Death</td>
+                        <td>Username</td>
+                        <td>Role</td>
+                        <td>Head</td>
+                        <td>Chest</td>
+                        <td>Boots</td>
+                        <td>Main Hand</td>
+                        <td>Off Hand</td>
+                        <td>Status</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id = "table">
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Fetch the table rows from data.php and insert into the table body
+        fetch('deathLogsPoop.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('table').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>

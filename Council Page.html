@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "styles.css" rel = "stylesheet">
+    <title>Scatter Company</title>
+</head>
+<body>
+    <div class = "header">
+        <img src = "images/logo.png" class = "imghd">
+        <p class = "hd">Welcome to Scatter Company!</p>
+        <ul class = "navbarUl">
+            <a href = "index.html"><li class = "navbarLi">Logout</li></a>
+        </ul>
+    </div>
+    <div class = "main">
+        <div class = "options">
+            <ul class = "op">
+                <a href = "Council%20Page.html" class = "opLi"><li>New Member Accounts</li></a>
+                <a href = "Council%20Page1.html"class = "opLi"><li>Death Logs</li></a>
+            </ul>
+        </div>
+        <div class = "holder">
+            <form action = "addMember.php" method = "POST" class = "addMem">
+                <h1>Create new member account</h1>
+                <label class = "adlb">username</label>
+                <br>
+                <input type = "text" class = "txtMem" name = "username">
+                <br>
+                <label class = "adlb">password</label>
+                <br>
+                <input type = "text" class = "txtMem" name = "password">
+                <br>
+                <label class = "adlb">IGN</label>
+                <br>
+                <input type = "text" class = "txtMem" name = "ign">
+                <br>
+                <label class = "adlb"   >Main Role</label>
+                <br>
+                <input type = "text" class = "txtMem" name = "role">
+                <br>
+                <input type = "submit" class = "submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
